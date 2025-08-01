@@ -4,28 +4,24 @@ import { ArrowRight, MessageCircle, Smartphone, Download } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-peacock rounded-full filter blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-peacock-subtle rounded-full filter blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      {/* Background Animation Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-white/10 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <div className="space-y-8 text-white">
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
                 Financial{" "}
-                <span className="bg-gradient-peacock bg-clip-text text-transparent animate-fade-in">
-                  infrastructure
-                </span>
+                <br />
+                infrastructure{" "}
                 <br />
                 to grow your{" "}
-                <span className="relative">
-                  revenue
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-peacock rounded-full animate-scale-in"></div>
-                </span>
+                <span className="text-white">revenue</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
                 Join trusted chit funds with guaranteed returns. Save, invest, and grow your wealth with India's most reliable chit fund platform.
