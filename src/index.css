@@ -41,11 +41,7 @@ All colors MUST be HSL.
     /* Peacock brand gradients */
     --gradient-peacock: linear-gradient(135deg, hsl(162 92% 35%), hsl(180 100% 40%), hsl(210 80% 50%));
     --gradient-peacock-subtle: linear-gradient(135deg, hsl(162 85% 45%), hsl(180 85% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(290 100% 50%) 0%, hsl(320 100% 60%) 25%, hsl(180 100% 40%) 75%, hsl(162 92% 35%) 100%);
-    
-    /* Shadows with peacock glow */
-    --shadow-peacock: 0 10px 30px -10px hsl(162 92% 35% / 0.3);
-    --shadow-glow: 0 0 40px hsl(162 85% 45% / 0.4);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(162 20% 95%) 50%, hsl(180 20% 95%) 100%);
     
     /* Shadows with peacock glow */
     --shadow-peacock: 0 10px 30px -10px hsl(162 92% 35% / 0.3);
