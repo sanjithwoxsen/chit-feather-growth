@@ -69,13 +69,15 @@ export default {
 				'gradient-peacock-subtle': 'var(--gradient-peacock-subtle)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-glass': 'var(--gradient-glass)',
-				'gradient-card-glow': 'var(--gradient-card-glow)'
+				'gradient-card-glow': 'var(--gradient-card-glow)',
+				'gradient-button': 'var(--gradient-button)'
 			},
 			boxShadow: {
 				'peacock': 'var(--shadow-peacock)',
 				'glow': 'var(--shadow-glow)',
 				'glass': 'var(--shadow-glass)',
-				'float': 'var(--shadow-float)'
+				'float': 'var(--shadow-float)',
+				'button': 'var(--shadow-button)'
 			},
 			backdropBlur: {
 				'glass': '13.5px'

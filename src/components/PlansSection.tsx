@@ -62,18 +62,18 @@ const PlansSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-slide-up">
-          <div className="inline-flex items-center bg-gradient-glass backdrop-blur-glass rounded-full px-6 py-2 border border-white/20 mb-6 shadow-glass">
-            <Sparkles className="w-4 h-4 text-primary mr-2 animate-pulse" />
-            <span className="text-sm font-medium text-primary">Choose Your Investment Plan</span>
+          <div className="inline-flex items-center bg-gradient-glass backdrop-blur-glass rounded-full px-6 py-3 border border-white/30 mb-6 shadow-glass hover:shadow-glow transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <Sparkles className="w-5 h-5 text-primary mr-2 animate-pulse group-hover:animate-bounce" />
+            <span className="text-sm font-semibold text-primary">Investment Plans</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">
             Choose Your{" "}
-            <span className="bg-gradient-peacock bg-clip-text text-transparent animate-glow-pulse">
-              U-Chit Plan
+            <span className="bg-gradient-peacock bg-clip-text text-transparent animate-glow-pulse hover:scale-105 transition-all duration-300 cursor-pointer inline-block">
+              Plan
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Flexible chit fund plans designed for every financial goal. Start small, dream big.
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            Smart chit funds for every goal.
           </p>
         </div>
 
@@ -111,30 +111,30 @@ const PlansSection = () => {
               </CardHeader>
 
               <CardContent className="space-y-6 relative z-10">
-                <div className="bg-gradient-glass backdrop-blur-glass rounded-xl p-5 space-y-4 border border-white/10 group-hover:border-primary/20 transition-colors">
-                  <div className="flex justify-between items-center py-2 hover:bg-white/5 rounded-lg px-3 transition-colors">
-                    <span className="text-sm font-medium text-muted-foreground">Duration</span>
-                    <span className="font-bold">{plan.duration}</span>
+                <div className="bg-gradient-glass backdrop-blur-glass rounded-2xl p-6 space-y-4 border border-white/20 group-hover:border-primary/30 transition-all duration-500 hover:scale-105">
+                  <div className="flex justify-between items-center py-3 hover:bg-white/10 rounded-xl px-4 transition-all duration-300 cursor-pointer group/item">
+                    <span className="text-sm font-medium">Duration</span>
+                    <span className="font-bold text-lg group-hover/item:text-primary transition-colors">{plan.duration}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 hover:bg-white/5 rounded-lg px-3 transition-colors">
-                    <span className="text-sm font-medium text-muted-foreground">Total Investment</span>
-                    <span className="font-bold">{plan.totalAmount}</span>
+                  <div className="flex justify-between items-center py-3 hover:bg-white/10 rounded-xl px-4 transition-all duration-300 cursor-pointer group/item">
+                    <span className="text-sm font-medium">Total</span>
+                    <span className="font-bold text-lg group-hover/item:text-primary transition-colors">{plan.totalAmount}</span>
                   </div>
                   <div className="border-t border-white/20 pt-4">
-                    <div className="flex justify-between items-center bg-gradient-card-glow rounded-lg p-3">
-                      <span className="font-semibold">You can receive</span>
-                      <span className="text-xl font-bold bg-gradient-peacock bg-clip-text text-transparent">
+                    <div className="flex justify-between items-center bg-gradient-card-glow rounded-xl p-4 hover:scale-105 transition-all duration-300 cursor-pointer group/receive">
+                      <span className="font-bold">You Get</span>
+                      <span className="text-xl font-bold bg-gradient-peacock bg-clip-text text-transparent group-hover/receive:animate-glow-pulse">
                         {plan.canReceive}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start space-x-3 p-2 rounded-lg hover:bg-white/5 transition-colors group/feature">
-                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0 group-hover/feature:animate-bounce" />
-                      <span className="text-sm font-medium">{feature}</span>
+                <div className="space-y-2">
+                  {plan.features.slice(0, 3).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-all duration-300 group/feature cursor-pointer">
+                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0 group-hover/feature:animate-bounce group-hover/feature:scale-110 transition-all duration-300" />
+                      <span className="text-sm font-medium group-hover/feature:text-primary transition-colors">{feature}</span>
                     </div>
                   ))}
                 </div>

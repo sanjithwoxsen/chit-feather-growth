@@ -5,25 +5,25 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 relative overflow-hidden group",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-peacock hover:shadow-glow",
-        peacock: "bg-gradient-peacock text-white hover:shadow-glow transform hover:scale-105",
+        default: "bg-gradient-button backdrop-blur-glass border border-white/30 text-foreground shadow-button hover:shadow-glow hover:scale-105 hover:border-primary/50 transition-all duration-400",
+        peacock: "bg-gradient-peacock text-white shadow-peacock hover:shadow-glow hover:scale-110 border-0 font-semibold transition-all duration-500 hover:brightness-110 relative before:absolute before:inset-0 before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-gradient-button backdrop-blur-glass border border-red-500/30 text-red-400 shadow-button hover:shadow-[0_0_25px_rgba(239,68,68,0.6)] hover:scale-105",
         outline:
-          "border border-primary/20 bg-background text-primary hover:bg-gradient-peacock-subtle hover:text-white hover:shadow-peacock",
+          "bg-gradient-glass backdrop-blur-glass border border-white/40 text-foreground shadow-glass hover:shadow-glow hover:scale-105 hover:border-primary/60 hover:text-primary transition-all duration-400",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-gradient-button backdrop-blur-glass border border-white/25 text-foreground shadow-button hover:shadow-glow hover:scale-105",
+        ghost: "bg-transparent hover:bg-gradient-glass hover:backdrop-blur-glass hover:text-primary transition-all duration-300 hover:scale-105",
+        link: "text-primary underline-offset-4 hover:underline hover:text-primary-glow transition-colors hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        lg: "h-12 rounded-md px-8 text-base font-semibold",
         icon: "h-10 w-10",
       },
     },
