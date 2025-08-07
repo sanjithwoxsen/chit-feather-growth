@@ -41,14 +41,24 @@ All colors MUST be HSL.
     /* Peacock brand gradients */
     --gradient-peacock: linear-gradient(135deg, hsl(162 92% 35%), hsl(180 100% 40%), hsl(210 80% 50%));
     --gradient-peacock-subtle: linear-gradient(135deg, hsl(162 85% 45%), hsl(180 85% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(162 20% 95%) 50%, hsl(180 20% 95%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 5%) 0%, hsl(162 50% 15%) 50%, hsl(180 40% 20%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-card-glow: linear-gradient(135deg, hsl(162 70% 50% / 0.1), hsl(180 70% 50% / 0.1));
     
-    /* Shadows with peacock glow */
-    --shadow-peacock: 0 10px 30px -10px hsl(162 92% 35% / 0.3);
-    --shadow-glow: 0 0 40px hsl(162 85% 45% / 0.4);
+    /* Professional shadows and effects */
+    --shadow-peacock: 0 20px 40px -12px hsl(162 92% 35% / 0.4);
+    --shadow-glow: 0 0 60px hsl(162 85% 45% / 0.6);
+    --shadow-glass: 0 8px 32px 0 rgba(162, 255, 221, 0.37);
+    --shadow-float: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* Glass morphism */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-blur: blur(13.5px);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 

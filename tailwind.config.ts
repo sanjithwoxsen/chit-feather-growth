@@ -67,14 +67,22 @@ export default {
 			backgroundImage: {
 				'gradient-peacock': 'var(--gradient-peacock)',
 				'gradient-peacock-subtle': 'var(--gradient-peacock-subtle)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-glass': 'var(--gradient-glass)',
+				'gradient-card-glow': 'var(--gradient-card-glow)'
 			},
 			boxShadow: {
 				'peacock': 'var(--shadow-peacock)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'glass': 'var(--shadow-glass)',
+				'float': 'var(--shadow-float)'
+			},
+			backdropBlur: {
+				'glass': '13.5px'
 			},
 			transitionProperty: {
-				'smooth': 'var(--transition-smooth)'
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -97,11 +105,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'float-slow': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-10px) rotate(5deg)' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(100px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.9)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(162 85% 45% / 0.4)' },
+					'50%': { boxShadow: '0 0 40px hsl(162 85% 45% / 0.8)' }
+				},
+				'coin-flip': {
+					'0%': { transform: 'rotateY(0deg)' },
+					'100%': { transform: 'rotateY(360deg)' }
+				},
+				'money-flow': {
+					'0%': { transform: 'translateX(-100%) scale(0.8)', opacity: '0' },
+					'50%': { transform: 'translateX(0%) scale(1)', opacity: '1' },
+					'100%': { transform: 'translateX(100%) scale(0.8)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'float-slow': 'float-slow 8s ease-in-out infinite',
+				'slide-up': 'slide-up 0.6s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'coin-flip': 'coin-flip 3s ease-in-out infinite',
+				'money-flow': 'money-flow 3s ease-in-out infinite'
 			}
 		}
 	},
