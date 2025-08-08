@@ -17,10 +17,10 @@ All colors MUST be HSL.
     --popover: 220 30% 98%;
     --popover-foreground: 220 10% 15%;
 
-    /* Interactive peacock colors */
-    --primary: 162 92% 45%;
+    /* Interactive peacock colors - softer blend */
+    --primary: 162 45% 60%;
     --primary-foreground: 210 40% 98%;
-    --primary-glow: 162 100% 55%;
+    --primary-glow: 162 55% 70%;
 
     --secondary: 220 15% 90%;
     --secondary-foreground: 220 10% 15%;
@@ -28,7 +28,7 @@ All colors MUST be HSL.
     --muted: 220 15% 90%;
     --muted-foreground: 220 25% 45%;
 
-    --accent: 180 100% 50%;
+    --accent: 180 40% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,14 +36,14 @@ All colors MUST be HSL.
 
     --border: 220 15% 85%;
     --input: 220 15% 85%;
-    --ring: 162 92% 45%;
+    --ring: 162 45% 60%;
 
-    /* Enhanced interactive gradients */
-    --gradient-peacock: linear-gradient(135deg, hsl(162 100% 45%), hsl(180 100% 50%), hsl(200 100% 55%));
-    --gradient-peacock-subtle: linear-gradient(135deg, hsl(162 90% 50%), hsl(180 90% 55%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 30% 98%) 0%, hsl(162 30% 95%) 30%, hsl(180 25% 95%) 70%, hsl(200 30% 96%) 100%);
+    /* Enhanced interactive gradients - softer blend */
+    --gradient-peacock: linear-gradient(135deg, hsl(162 45% 60%), hsl(180 40% 65%), hsl(200 35% 70%));
+    --gradient-peacock-subtle: linear-gradient(135deg, hsl(162 35% 75%), hsl(180 30% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 98%) 0%, hsl(162 20% 95%) 30%, hsl(180 15% 96%) 70%, hsl(200 20% 97%) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
-    --gradient-card-glow: linear-gradient(135deg, hsl(162 70% 50% / 0.15), hsl(180 70% 50% / 0.1));
+    --gradient-card-glow: linear-gradient(135deg, hsl(162 30% 60% / 0.1), hsl(180 25% 65% / 0.08));
     --gradient-button: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
     
     /* Interactive shadows and effects */
