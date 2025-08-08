@@ -64,6 +64,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'ui-sans-serif', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans']
+			},
 			backgroundImage: {
 				'gradient-peacock': 'var(--gradient-peacock)',
 				'gradient-peacock-subtle': 'var(--gradient-peacock-subtle)',

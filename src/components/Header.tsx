@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,13 +10,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-gradient-glass backdrop-blur-glass border-b border-white/20 shadow-glass">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img 
-            src="/lovable-uploads/e6e76de3-b5f5-47f6-8dbf-176a71b9ee62.png" 
-            alt="Senthur Chits Logo" 
-            className="h-8 w-8"
-          />
-          <span className="text-xl font-bold bg-gradient-peacock bg-clip-text text-transparent">
-            Senthur Chits
+          <Logo className="h-8 w-8" aria-label="Senthur Chits logo" />
+          <span className="text-xl font-extrabold tracking-tight">
+            <span className="bg-gradient-peacock bg-clip-text text-transparent">Senthur</span> Chits
           </span>
         </div>
 
