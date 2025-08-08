@@ -45,6 +45,14 @@ All colors MUST be HSL.
     --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
     --gradient-card-glow: linear-gradient(135deg, hsl(192 78% 47% / 0.12), hsl(102 78% 52% / 0.1));
     --gradient-button: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.55));
+    /* Vibrant multicolor aurora gradient using logo colors */
+    --gradient-aurora: linear-gradient(135deg,
+      hsl(218 84% 43%) 0%,
+      hsl(212 80% 52%) 20%,
+      hsl(192 78% 47%) 45%,
+      hsl(168 60% 55%) 70%,
+      hsl(102 78% 52%) 100%
+    );
     
     /* Interactive shadows and effects */
     --shadow-peacock: 0 25px 50px -12px hsl(162 100% 45% / 0.6);

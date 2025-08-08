@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle, Smartphone, Download, DollarSign, TrendingUp
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-aurora flex items-center overflow-hidden">
       {/* Enhanced Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-peacock rounded-full filter blur-xl animate-float opacity-20"></div>
@@ -33,27 +33,20 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-slide-up">
-                Smart{" "}
-                <span className="bg-gradient-peacock bg-clip-text text-transparent animate-glow-pulse">
-                  Chit
-                </span>
+              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight animate-slide-up">
+                Smarter Chit Plans
                 <br />
-                Funds{" "}
-                <span className="relative group">
-                  <span className="bg-gradient-peacock bg-clip-text text-transparent">Platform</span>
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-peacock rounded-full animate-scale-in group-hover:h-2 transition-all duration-300"></div>
-                </span>
+                <span className="bg-gradient-peacock bg-clip-text text-transparent">Transparent. Trusted.</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                Trusted chit funds with guaranteed returns. Grow your wealth smartly.
+                Smarter plans for brighter futures.
               </p>
             </div>
 
             {/* Interactive CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <Button 
-                variant="peacock" 
+                variant="aurora" 
                 size="lg" 
                 className="group hover:animate-glow-pulse"
               >
@@ -139,7 +132,7 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                <Button variant="peacock" className="w-full group hover:shadow-glow transition-all duration-300 hover:scale-105">
+                <Button variant="aurora" className="w-full group hover:shadow-glow transition-all duration-300 hover:scale-105">
                   <DollarSign className="mr-2 h-5 w-5 group-hover:animate-coin-flip" />
                   Start This Plan
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

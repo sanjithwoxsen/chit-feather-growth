@@ -73,7 +73,8 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-glass': 'var(--gradient-glass)',
 				'gradient-card-glow': 'var(--gradient-card-glow)',
-				'gradient-button': 'var(--gradient-button)'
+				'gradient-button': 'var(--gradient-button)',
+				'gradient-aurora': 'var(--gradient-aurora)'
 			},
 			boxShadow: {
 				'peacock': 'var(--shadow-peacock)',

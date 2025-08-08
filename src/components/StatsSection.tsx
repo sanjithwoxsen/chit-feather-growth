@@ -1,97 +1,35 @@
-import { TrendingUp, Users, Shield, Award } from "lucide-react";
+import { Handshake, Users, Sparkles, Headphones, ShieldCheck, FileMinus2 } from "lucide-react";
+
+const features = [
+  { icon: Handshake, value: "33+", label: "Years in Trust" },
+  { icon: Users, value: "3000+", label: "Happy Subscribers" },
+  { icon: Sparkles, value: "AI-enabled", label: "Chit Fund" },
+  { icon: Headphones, value: "24/7", label: "Digital Support" },
+  { icon: ShieldCheck, value: "100%", label: "Transparent" },
+  { icon: FileMinus2, value: "Less", label: "Documentation" },
+];
 
 const StatsSection = () => {
-  const stats = [
-    {
-      icon: Users,
-      number: "10,000+",
-      label: "Active Members",
-      description: "Growing community"
-    },
-    {
-      icon: TrendingUp,
-      number: "₹50Cr+",
-      label: "Funds Managed",
-      description: "Secure investments"
-    },
-    {
-      icon: Shield,
-      number: "15+",
-      label: "Years Experience",
-      description: "Trusted platform"
-    },
-    {
-      icon: Award,
-      number: "99.8%",
-      label: "Success Rate",
-      description: "Guaranteed returns"
-    }
-  ];
-
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-10 md:pt-14 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Trusted by thousands across{" "}
-            <span className="bg-gradient-peacock bg-clip-text text-transparent">
-              India
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join India's most reliable chit fund platform with proven track record and guaranteed returns
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => {
-            const IconComponent = stat.icon;
-            return (
-              <div
-                key={index}
-                className="text-center group hover:scale-105 transition-transform duration-300"
-              >
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 mx-auto bg-gradient-peacock rounded-xl flex items-center justify-center shadow-glow group-hover:shadow-peacock transition-shadow duration-300">
-                    <IconComponent className="h-8 w-8 text-white" />
+        {/* Feature ribbon from reference image */}
+        <div className="rounded-3xl bg-white shadow-glass border border-border/60 px-4 sm:px-6 md:px-10 py-6 md:py-7 -mt-16 md:-mt-24 relative z-20">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+            {features.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div key={i} className="flex items-center gap-3 md:gap-4">
+                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-gradient-aurora text-white flex items-center justify-center shadow-peacock">
+                    <Icon className="h-5 w-5 md:h-6 md:w-6" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-peacock rounded-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary animate-fade-in">
-                    {stat.number}
-                  </div>
-                  <div className="text-lg font-semibold text-foreground">
-                    {stat.label}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {stat.description}
+                  <div className="leading-tight">
+                    <div className="text-lg md:text-xl font-extrabold tracking-tight">{f.value}</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">{f.label}</div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Trust badges */}
-        <div className="mt-16 pt-16 border-t border-border">
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-center">
-              <div className="text-sm font-medium text-muted-foreground">RBI COMPLIANT</div>
-            </div>
-            <div className="h-8 w-px bg-border"></div>
-            <div className="text-center">
-              <div className="text-sm font-medium text-muted-foreground">GOVERNMENT REGISTERED</div>
-            </div>
-            <div className="h-8 w-px bg-border"></div>
-            <div className="text-center">
-              <div className="text-sm font-medium text-muted-foreground">SECURED TRANSACTIONS</div>
-            </div>
-            <div className="h-8 w-px bg-border"></div>
-            <div className="text-center">
-              <div className="text-sm font-medium text-muted-foreground">INSURANCE COVERED</div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

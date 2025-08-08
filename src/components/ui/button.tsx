@@ -11,6 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-gradient-button backdrop-blur-glass border border-white/30 text-foreground shadow-button hover:shadow-glow hover:scale-105 hover:border-primary/50 transition-all duration-400",
         peacock: "bg-gradient-peacock text-white shadow-peacock hover:shadow-glow hover:scale-110 border-0 font-semibold transition-all duration-500 hover:brightness-110 relative before:absolute before:inset-0 before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
+        aurora: "bg-gradient-aurora text-white shadow-peacock hover:shadow-glow hover:scale-110 border-0 font-semibold transition-all duration-500 hover:brightness-110",
         destructive:
           "bg-gradient-button backdrop-blur-glass border border-red-500/30 text-red-400 shadow-button hover:shadow-[0_0_25px_rgba(239,68,68,0.6)] hover:scale-105",
         outline:
@@ -21,10 +22,10 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline hover:text-primary-glow transition-colors hover:scale-105",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-12 rounded-md px-8 text-base font-semibold",
-        icon: "h-10 w-10",
+        default: "h-11 px-6 rounded-xl",
+        sm: "h-9 rounded-lg px-4",
+        lg: "h-12 rounded-2xl px-8 text-base font-semibold",
+        icon: "h-10 w-10 rounded-xl",
       },
     },
     defaultVariants: {
