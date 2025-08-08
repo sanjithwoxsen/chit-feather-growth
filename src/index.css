@@ -38,13 +38,13 @@ All colors MUST be HSL.
     --input: 220 15% 85%;
     --ring: 162 45% 60%;
 
-    /* Enhanced interactive gradients - softer blend */
-    --gradient-peacock: linear-gradient(135deg, hsl(162 45% 60%), hsl(180 40% 65%), hsl(200 35% 70%));
-    --gradient-peacock-subtle: linear-gradient(135deg, hsl(162 35% 75%), hsl(180 30% 80%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 30% 98%) 0%, hsl(162 20% 95%) 30%, hsl(180 15% 96%) 70%, hsl(200 20% 97%) 100%);
+    /* Peacock logo gradient - vivid but clean */
+    --gradient-peacock: linear-gradient(135deg, hsl(218 84% 43%), hsl(192 78% 47%), hsl(102 78% 52%));
+    --gradient-peacock-subtle: linear-gradient(135deg, hsl(218 55% 68%), hsl(192 50% 72%), hsl(102 55% 74%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(218 30% 97%) 25%, hsl(192 28% 97%) 60%, hsl(102 30% 98%) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
-    --gradient-card-glow: linear-gradient(135deg, hsl(162 30% 60% / 0.1), hsl(180 25% 65% / 0.08));
-    --gradient-button: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+    --gradient-card-glow: linear-gradient(135deg, hsl(192 78% 47% / 0.12), hsl(102 78% 52% / 0.1));
+    --gradient-button: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.55));
     
     /* Interactive shadows and effects */
     --shadow-peacock: 0 25px 50px -12px hsl(162 100% 45% / 0.6);
