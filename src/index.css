@@ -60,7 +60,6 @@ All colors MUST be HSL.
     --shadow-glass: 0 8px 32px 0 rgba(162, 255, 221, 0.5);
     --shadow-float: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
     --shadow-button: 0 4px 15px 0 rgba(162, 255, 221, 0.3);
-    --shadow-neutral: 0 0 30px hsl(45 90% 85% / 0.35);
     
     /* Enhanced glass morphism */
     --glass-bg: rgba(255, 255, 255, 0.15);
