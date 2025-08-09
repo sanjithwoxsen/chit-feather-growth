@@ -81,7 +81,8 @@ export default {
 				'glow': 'var(--shadow-glow)',
 				'glass': 'var(--shadow-glass)',
 				'float': 'var(--shadow-float)',
-				'button': 'var(--shadow-button)'
+				'button': 'var(--shadow-button)',
+				'neutral': 'var(--shadow-neutral)'
 			},
 			backdropBlur: {
 				'glass': '13.5px'
@@ -145,6 +146,14 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'wave': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'wave-slow': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-25%)' }
 				}
 			},
 			animation: {
@@ -157,7 +166,9 @@ export default {
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'coin-flip': 'coin-flip 3s ease-in-out infinite',
 				'money-flow': 'money-flow 3s ease-in-out infinite',
-				'aurora': 'aurora 15s ease-in-out infinite'
+				'aurora': 'aurora 15s ease-in-out infinite',
+				'wave': 'wave 18s linear infinite',
+				'wave-slow': 'wave-slow 28s linear infinite'
 			}
 		}
 	},

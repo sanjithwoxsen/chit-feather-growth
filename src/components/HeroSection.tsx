@@ -1,26 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Smartphone, Download, IndianRupee, TrendingUp, Shield, Zap, Coins } from "lucide-react";
-
+import Logo from "@/components/Logo";
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-aurora bg-[length:240%_240%] animate-aurora flex items-center overflow-hidden">
-      {/* Enhanced Background Animation */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-peacock rounded-full filter blur-xl animate-float opacity-20"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-peacock-subtle rounded-full filter blur-xl animate-float-slow opacity-15"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-card-glow rounded-full filter blur-2xl opacity-10 animate-pulse"></div>
-        
-        {/* Floating Financial Elements */}
-        <div className="absolute bottom-32 right-1/4 animate-float-slow">
-          <div className="w-16 h-16 bg-gradient-glass backdrop-blur-glass rounded-full flex items-center justify-center shadow-glass border border-white/20">
-            <TrendingUp className="w-8 h-8 text-primary animate-coin-flip" />
-          </div>
-        </div>
-        <div className="absolute top-1/2 right-16 animate-float">
-          <div className="w-10 h-10 bg-gradient-glass backdrop-blur-glass rounded-full flex items-center justify-center shadow-glass border border-white/20">
-            <Coins className="w-5 h-5 text-primary animate-money-flow" />
-          </div>
-        </div>
+    <section className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden">
+      {/* Wavy Gradient Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <svg className="absolute bottom-0 left-0 w-[200%] h-[60%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="heroWave" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(218 84% 43%)" />
+              <stop offset="50%" stopColor="hsl(192 78% 47%)" />
+              <stop offset="100%" stopColor="hsl(102 78% 52%)" />
+            </linearGradient>
+          </defs>
+          <g className="animate-wave">
+            <path fill="url(#heroWave)" fillOpacity="0.22" d="M0,160L48,165.3C96,171,192,181,288,176C384,171,480,149,576,133.3C672,117,768,107,864,117.3C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+          </g>
+        </svg>
+        <svg className="absolute top-0 right-0 w-[200%] h-[50%] opacity-50" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <g className="animate-wave-slow">
+            <path fill="url(#heroWave)" fillOpacity="0.18" d="M0,64L60,85.3C120,107,240,149,360,165.3C480,181,600,171,720,165.3C840,160,960,160,1080,165.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" />
+          </g>
+        </svg>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
