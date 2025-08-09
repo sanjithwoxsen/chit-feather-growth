@@ -140,6 +140,11 @@ export default {
 					'0%': { transform: 'translateX(-100%) scale(0.8)', opacity: '0' },
 					'50%': { transform: 'translateX(0%) scale(1)', opacity: '1' },
 					'100%': { transform: 'translateX(100%) scale(0.8)', opacity: '0' }
+				},
+				'aurora': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -151,7 +156,8 @@ export default {
 				'scale-in': 'scale-in 0.5s ease-out',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'coin-flip': 'coin-flip 3s ease-in-out infinite',
-				'money-flow': 'money-flow 3s ease-in-out infinite'
+				'money-flow': 'money-flow 3s ease-in-out infinite',
+				'aurora': 'aurora 15s ease-in-out infinite'
 			}
 		}
 	},

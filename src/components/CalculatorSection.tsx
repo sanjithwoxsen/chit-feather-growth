@@ -30,7 +30,7 @@ const CalculatorSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <Card className="overflow-hidden border-primary/20 shadow-peacock">
-            <CardHeader className="bg-gradient-peacock-subtle text-white">
+            <CardHeader className="bg-gradient-aurora bg-[length:240%_240%] animate-aurora text-white py-8">
               <CardTitle className="flex items-center justify-center space-x-2 text-2xl">
                 <Calculator className="h-6 w-6" />
                 <span>Chit Fund Calculator</span>
@@ -97,10 +97,7 @@ const CalculatorSection = () => {
                 {/* Results */}
                 <div className="space-y-6">
                   <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-peacock rounded-full mb-4">
-                      <TrendingUp className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold">Your Investment Summary</h3>
+                    <SenthurChitCycle />
                   </div>
 
                   <div className="space-y-4">
