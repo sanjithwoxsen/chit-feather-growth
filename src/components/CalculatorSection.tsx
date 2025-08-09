@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Calculator, TrendingUp } from "lucide-react";
+import SenthurChitCycle from "@/components/SenthurChitCycle";
 
 const CalculatorSection = () => {
   const [monthlyAmount, setMonthlyAmount] = useState([5000]);
