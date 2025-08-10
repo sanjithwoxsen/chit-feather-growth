@@ -4,18 +4,21 @@ import { ArrowRight, MessageCircle, Smartphone, Download, IndianRupee, TrendingU
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen bg-gradient-waves animate-gradient-waves flex items-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-aurora bg-[length:240%_240%] animate-aurora-waves flex items-center overflow-hidden">
       {/* Enhanced Background Animation */}
       <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-peacock rounded-full filter blur-xl animate-float opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-peacock-subtle rounded-full filter blur-xl animate-float-slow opacity-15"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-card-glow rounded-full filter blur-2xl opacity-10 animate-pulse"></div>
         
         {/* Floating Financial Elements */}
         <div className="absolute bottom-32 right-1/4 animate-float-slow">
-          <div className="w-16 h-16 bg-gradient-glass backdrop-blur-glass rounded-full flex items-center justify-center shadow-glass border border-border">
+          <div className="w-16 h-16 bg-gradient-glass backdrop-blur-glass rounded-full flex items-center justify-center shadow-glass border border-white/20">
             <TrendingUp className="w-8 h-8 text-primary animate-coin-flip" />
           </div>
         </div>
         <div className="absolute top-1/2 right-16 animate-float">
-          <div className="w-10 h-10 bg-gradient-glass backdrop-blur-glass rounded-full flex items-center justify-center shadow-glass border border-border">
+          <div className="w-10 h-10 bg-gradient-glass backdrop-blur-glass rounded-full flex items-center justify-center shadow-glass border border-white/20">
             <Coins className="w-5 h-5 text-primary animate-money-flow" />
           </div>
         </div>
@@ -31,7 +34,7 @@ const HeroSection = () => {
                 <br />
                 <span className="text-foreground">Transparent. Trusted.</span>
               </h1>
-              <p className="text-xl text-foreground max-w-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-xl text-white max-w-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
                 Smarter plans for brighter futures.
               </p>
             </div>
@@ -47,7 +50,7 @@ const HeroSection = () => {
                 Join Now
                 <ArrowRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" />
               </Button>
-              <Button variant="ghost" size="lg" className="group bg-card text-foreground border border-border shadow-md hover:shadow-lg">
+              <Button variant="ghost" size="lg" className="group bg-transparent border border-white/70 text-white hover:bg-white/10">
                 <Download className="mr-2 h-5 w-5" />
                 Get App
                 <Smartphone className="ml-2 h-5 w-5" />
@@ -133,6 +136,13 @@ const HeroSection = () => {
               </div>
             </div>
 
+            {/* Enhanced Floating elements */}
+            <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-peacock rounded-full opacity-30 animate-float"></div>
+            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-peacock-subtle rounded-full opacity-25 animate-float-slow"></div>
+            <div className="absolute top-1/2 -right-8 w-8 h-8 bg-primary rounded-full opacity-40 animate-bounce"></div>
+            
+            {/* Money flow animation */}
+            <div className="absolute top-4 left-4 w-6 h-6 rounded-full bg-gradient-peacock opacity-60 animate-money-flow"></div>
           </div>
         </div>
 
