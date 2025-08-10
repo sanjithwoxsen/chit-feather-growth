@@ -54,6 +54,18 @@ All colors MUST be HSL.
       hsl(102 78% 52%) 100%
     );
 
+    /* Stripe-like wave palette (purple -> pink -> warm amber) */
+    --wave-purple: 268 72% 55%;
+    --wave-pink: 330 78% 64%;
+    --wave-amber: 28 92% 65%;
+
+    /* Layered radial waves inspired by reference */
+    --gradient-waves:
+      radial-gradient(1200px 600px at 10% 10%, hsl(var(--wave-amber) / 0.25), transparent 60%),
+      radial-gradient(1000px 500px at 90% 20%, hsl(var(--wave-pink) / 0.35), transparent 65%),
+      radial-gradient(900px 600px at 40% 100%, hsl(var(--wave-purple) / 0.35), transparent 60%),
+      linear-gradient(135deg, hsl(var(--wave-purple) / 0.25), hsl(var(--wave-pink) / 0.25) 50%, hsl(var(--wave-amber) / 0.25));
+
     /* Professional warm glow (non-blue/green) */
     --glow-warm: 38 92% 60%;
     --glow-warm-soft: 38 92% 85%;
@@ -150,4 +162,39 @@ All colors MUST be HSL.
   .text-glow-warm {
     text-shadow: 0 1px 0 hsl(var(--background)), 0 0 16px hsl(var(--glow-warm) / 0.35);
   }
+
+  /* Background gradient waves utilities */
+  .bg-gradient-waves {
+    background-image: var(--gradient-waves);
+    background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+    background-attachment: fixed;
+  }
+  @keyframes gradient-waves {
+    0% { background-position: 0% 0%, 100% 0%, 0% 100%, 50% 50%; }
+    50% { background-position: 50% 20%, 50% 60%, 30% 70%, 50% 50%; }
+    100% { background-position: 100% 40%, 0% 80%, 60% 20%, 50% 50%; }
+  }
+  .animate-gradient-waves { animation: gradient-waves 16s ease-in-out infinite alternate; }
+
+  /* Glass helpers used by header */
+  .bg-gradient-glass { background-image: var(--gradient-glass); }
+  .backdrop-blur-glass { backdrop-filter: var(--glass-blur); }
+
+  /* Floating curved menubar */
+  .menubar-floating {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    border-radius: 9999px;
+    box-shadow: var(--shadow-glass);
+    padding: 0.5rem 0.75rem;
+    width: min(92%, 1100px);
+  }
+
+  /* Typewriter headline effect */
+  @keyframes typewriter {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+  .animate-typewriter { animation: typewriter 1.2s steps(22) 0.2s both; }
 }

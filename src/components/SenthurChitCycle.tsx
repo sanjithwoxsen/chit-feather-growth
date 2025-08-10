@@ -17,12 +17,12 @@ const SenthurChitCycle: React.FC = () => {
 
   return (
     <section className="w-full flex flex-col items-center justify-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold text-foreground text-glow-warm animate-slide-up mb-4">
+      <h2 className="text-2xl md:text-3xl font-extrabold text-foreground text-glow-warm animate-typewriter mb-4">
         Senthur Chit Cycle
       </h2>
       <div className="relative w-72 h-72">
         {/* Wavy aurora halo (keeps brand gradient, waves like iPhone wallpaper) */}
-        <div className="absolute inset-0 rounded-full bg-gradient-aurora bg-[length:240%_240%] animate-aurora-waves opacity-25" />
+        <div className="absolute inset-0 rounded-full bg-gradient-waves animate-gradient-waves opacity-25" />
 
         {/* Cycle stroke with subtle gradient */}
         <svg viewBox="0 0 240 240" className="absolute inset-0">
