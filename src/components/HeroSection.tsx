@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 import { ArrowRight, MessageCircle, Smartphone, Download, IndianRupee, TrendingUp, Shield, Zap, Coins } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-aurora bg-[length:240%_240%] animate-aurora flex items-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-aurora bg-[length:240%_240%] animate-aurora-waves flex items-center overflow-hidden">
       {/* Enhanced Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-peacock rounded-full filter blur-xl animate-float opacity-20"></div>
@@ -59,22 +60,22 @@ const HeroSection = () => {
             {/* Interactive Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 animate-slide-up" style={{ animationDelay: '0.6s' }}>
               <div className="text-center group cursor-pointer">
-                <div className="bg-gradient-glass backdrop-blur-glass rounded-2xl p-4 border border-white/30 shadow-glass transition-all duration-500 hover:scale-110 hover:rotate-2">
-                  <div className="text-3xl font-bold bg-gradient-peacock bg-clip-text text-transparent">10K+</div>
+                <div className="bg-card rounded-2xl p-4 border border-border shadow-md transition-all duration-500 hover:scale-110 hover:rotate-2">
+                  <div className="text-3xl font-extrabold text-foreground">10K+</div>
                   <div className="text-xs text-muted-foreground mt-1">Members</div>
                   <Shield className="w-4 h-4 text-primary mx-auto mt-2" />
                 </div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="bg-gradient-glass backdrop-blur-glass rounded-2xl p-4 border border-white/30 shadow-glass transition-all duration-500 hover:scale-110 hover:rotate-2">
-                  <div className="text-3xl font-bold bg-gradient-peacock bg-clip-text text-transparent" style={{ animationDelay: '0.2s' }}>₹50Cr+</div>
+                <div className="bg-card rounded-2xl p-4 border border-border shadow-md transition-all duration-500 hover:scale-110 hover:rotate-2">
+                  <div className="text-3xl font-extrabold text-foreground" style={{ animationDelay: '0.2s' }}>₹50Cr+</div>
                   <div className="text-xs text-muted-foreground mt-1">Funds</div>
                   <TrendingUp className="w-4 h-4 text-primary mx-auto mt-2" />
                 </div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="bg-gradient-glass backdrop-blur-glass rounded-2xl p-4 border border-white/30 shadow-glass transition-all duration-500 hover:scale-110 hover:rotate-2">
-                  <div className="text-3xl font-bold bg-gradient-peacock bg-clip-text text-transparent" style={{ animationDelay: '0.4s' }}>15+</div>
+                <div className="bg-card rounded-2xl p-4 border border-border shadow-md transition-all duration-500 hover:scale-110 hover:rotate-2">
+                  <div className="text-3xl font-extrabold text-foreground" style={{ animationDelay: '0.4s' }}>15+</div>
                   <div className="text-xs text-muted-foreground mt-1">Years</div>
                   <Zap className="w-4 h-4 text-primary mx-auto mt-2" />
                 </div>
@@ -84,15 +85,15 @@ const HeroSection = () => {
 
           {/* Enhanced Interactive Visual Element */}
           <div className="relative animate-slide-up">
-            <div className="relative bg-gradient-glass backdrop-blur-glass rounded-3xl shadow-float p-8 border border-white/20 transition-all duration-500 hover:scale-[1.02] group">
+            <div className="relative bg-card rounded-3xl shadow-md p-8 border border-border transition-all duration-500 hover:scale-[1.02] group">
               {/* Glowing border effect */}
               
               
               <div className="relative space-y-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-14 h-14 bg-gradient-peacock rounded-full flex items-center justify-center shadow-glass hover:scale-110 transition-all duration-300 cursor-pointer">
-                      <span className="text-white font-bold text-xl">SC</span>
+                    <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center shadow-glass hover:scale-110 transition-all duration-300 cursor-pointer">
+                      <span className="text-foreground font-bold text-xl">SC</span>
                     </div>
                     <div>
                       <div className="font-bold text-xl hover:text-primary transition-colors cursor-pointer">Smart Chit</div>
@@ -101,11 +102,11 @@ const HeroSection = () => {
                   </div>
                   <div className="text-right group cursor-pointer">
                     <div className="text-sm text-muted-foreground">Returns</div>
-                    <div className="text-3xl font-bold bg-gradient-peacock bg-clip-text text-transparent group-hover:scale-110 transition-all duration-300">15%</div>
+                    <div className="text-3xl font-extrabold text-foreground group-hover:scale-110 transition-all duration-300">15%</div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-glass backdrop-blur-glass rounded-2xl p-5 border border-white/20 space-y-4 hover:border-primary/40 transition-all duration-300">
+                <div className="bg-card rounded-2xl p-5 border border-border space-y-4 hover:border-primary/40 transition-all duration-300">
                   <div className="flex justify-between items-center py-2 hover:bg-white/10 rounded-xl px-4 transition-all duration-300 cursor-pointer group">
                     <span className="text-sm font-medium">Monthly</span>
                     <span className="font-bold text-lg group-hover:text-primary transition-colors">₹10K</span>
@@ -114,11 +115,11 @@ const HeroSection = () => {
                     <span className="text-sm font-medium">Duration</span>
                     <span className="font-bold text-lg group-hover:text-primary transition-colors">20M</span>
                   </div>
-                  <div className="border-t border-white/20 pt-4">
-                    <div className="flex justify-between items-center bg-gradient-card-glow rounded-xl p-4 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                  <div className="border-t border-border pt-4">
+                    <div className="flex justify-between items-center bg-card rounded-xl p-4 hover:scale-105 transition-all duration-300 cursor-pointer group">
                       <span className="font-bold text-lg">You Get</span>
                       <div className="text-right">
-                        <span className="text-2xl font-bold bg-gradient-peacock bg-clip-text text-transparent group-hover:scale-110 transition-all duration-300">
+                        <span className="text-2xl font-extrabold text-foreground group-hover:scale-110 transition-all duration-300">
                           ₹1.8L+
                         </span>
                         <div className="text-xs text-muted-foreground">Potential</div>
@@ -143,6 +144,11 @@ const HeroSection = () => {
             {/* Money flow animation */}
             <div className="absolute top-4 left-4 w-6 h-6 rounded-full bg-gradient-peacock opacity-60 animate-money-flow"></div>
           </div>
+        </div>
+
+        {/* Bottom Senthur logo with subtle warm glow */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center z-10">
+          <Logo className="w-16 h-16 logo-glow" aria-label="Senthur Chits Logo" />
         </div>
       </div>
     </section>

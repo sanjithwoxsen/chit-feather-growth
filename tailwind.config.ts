@@ -141,23 +141,31 @@ export default {
 					'50%': { transform: 'translateX(0%) scale(1)', opacity: '1' },
 					'100%': { transform: 'translateX(100%) scale(0.8)', opacity: '0' }
 				},
-				'aurora': {
-					'0%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' }
-				}
+					'aurora': {
+						'0%': { backgroundPosition: '0% 50%' },
+						'50%': { backgroundPosition: '100% 50%' },
+						'100%': { backgroundPosition: '0% 50%' }
+					},
+					'aurora-waves': {
+						'0%': { backgroundPosition: '0% 50%' },
+						'25%': { backgroundPosition: '50% 40%' },
+						'50%': { backgroundPosition: '100% 60%' },
+						'75%': { backgroundPosition: '50% 50%' },
+						'100%': { backgroundPosition: '0% 50%' }
+					}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'float-slow': 'float-slow 8s ease-in-out infinite',
-				'slide-up': 'slide-up 0.6s ease-out',
-				'scale-in': 'scale-in 0.5s ease-out',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'coin-flip': 'coin-flip 3s ease-in-out infinite',
-				'money-flow': 'money-flow 3s ease-in-out infinite',
-				'aurora': 'aurora 15s ease-in-out infinite'
+					'accordion-down': 'accordion-down 0.2s ease-out',
+					'accordion-up': 'accordion-up 0.2s ease-out',
+					'float': 'float 6s ease-in-out infinite',
+					'float-slow': 'float-slow 8s ease-in-out infinite',
+					'slide-up': 'slide-up 0.6s ease-out',
+					'scale-in': 'scale-in 0.5s ease-out',
+					'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+					'coin-flip': 'coin-flip 3s ease-in-out infinite',
+					'money-flow': 'money-flow 3s ease-in-out infinite',
+					'aurora': 'aurora 15s ease-in-out infinite',
+					'aurora-waves': 'aurora-waves 24s ease-in-out infinite'
 			}
 		}
 	},

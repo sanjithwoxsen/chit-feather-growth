@@ -53,6 +53,10 @@ All colors MUST be HSL.
       hsl(168 60% 55%) 70%,
       hsl(102 78% 52%) 100%
     );
+
+    /* Professional warm glow (non-blue/green) */
+    --glow-warm: 38 92% 60%;
+    --glow-warm-soft: 38 92% 85%;
     
     /* Interactive shadows and effects */
     --shadow-peacock: 0 25px 50px -12px hsl(162 100% 45% / 0.6);
@@ -136,5 +140,14 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .logo-glow {
+    filter: drop-shadow(0 6px 22px hsl(var(--glow-warm) / 0.35)) drop-shadow(0 0 16px hsl(var(--glow-warm) / 0.4));
+  }
+  .text-glow-warm {
+    text-shadow: 0 1px 0 hsl(var(--background)), 0 0 16px hsl(var(--glow-warm) / 0.35);
   }
 }
