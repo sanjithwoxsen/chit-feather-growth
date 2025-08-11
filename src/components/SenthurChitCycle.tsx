@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 const labels = [
-  { text: "Enroll", angle: 0 },
-  { text: "Monthly Pay", angle: 90 },
-  { text: "Auction", angle: 180 },
-  { text: "Payout", angle: 270 },
+  "Enroll",
+  "Monthly Pay",
+  "Auction",
+  "Payout",
 ];
 
 const SenthurChitCycle: React.FC = () => {
@@ -71,24 +71,25 @@ const SenthurChitCycle: React.FC = () => {
           ))}
         </div>
 
-        {/* Nodes + labels with active highlight */}
-        {labels.map(({ text, angle }, idx) => {
-          const r = 105;
+        {labels.map((label, idx) => {
+          const count = labels.length;
+          const angle = (idx * 360) / count - 90; // start at top, evenly spaced
+          const r = 95; // align nodes with the stroke radius
           const rad = (angle * Math.PI) / 180;
           const x = 120 + r * Math.cos(rad);
           const y = 120 + r * Math.sin(rad);
           const isActive = active === idx;
           return (
             <div
-              key={text}
-              className={`absolute flex flex-col items-center transition-transform duration-500 ${isActive ? "scale-110" : "scale-100"}`}
+              key={label}
+              className={`absolute flex flex-col items-center transition-transform transition-opacity duration-500 ${isActive ? "scale-110 opacity-100" : "scale-100 opacity-90"}`}
               style={{ left: x, top: y, transform: "translate(-50%, -50%)" }}
             >
-              <div className={`w-4 h-4 rounded-full bg-card border ${isActive ? "border-[hsl(var(--glow-warm))]" : "border-border"}`} />
+              <div className={`w-3.5 h-3.5 rounded-full bg-card border ${isActive ? "border-[hsl(var(--glow-warm))]" : "border-border"}`} />
               <span
                 className={`mt-2 text-xs font-semibold px-2 py-1 rounded-full shadow-sm bg-card text-foreground ${isActive ? "ring-1 ring-[hsl(var(--glow-warm)/0.5)]" : "opacity-80"}`}
               >
-                {text}
+                {label}
               </span>
             </div>
           );

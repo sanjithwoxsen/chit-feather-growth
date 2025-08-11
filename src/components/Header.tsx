@@ -20,17 +20,17 @@ const Header = () => {
       {/* Desktop menu bar: attached until scroll, then floating curved pill */}
       <div
         className={`${isScrolled
-          ? "fixed top-4 left-1/2 -translate-x-1/2 w-[min(92%,1000px)] rounded-full bg-gradient-glass backdrop-blur-glass border border-white/40 shadow-glass px-6 py-3"
+          ? "fixed top-4 left-0 right-0 mx-auto w-[min(92%,1000px)] rounded-full bg-background/50 backdrop-blur-lg border border-border/50 shadow-glass px-5 py-2.5"
           : "container mx-auto px-4 py-4"
-        } transition-all duration-500 ease-out hidden md:flex items-center justify-between`}
+        } transition-colors duration-500 ease-out hidden md:flex items-center justify-between`}
       >
-        <div className="flex items-center gap-3">
+        <div className={`flex items-center ${isScrolled ? "gap-2" : "gap-3"}`}>
           <Logo className="h-8 w-8" aria-label="Senthur Chits logo" />
           <span className="text-xl font-extrabold tracking-tight text-[hsl(var(--ink))]">
             <span className="bg-gradient-peacock bg-clip-text text-transparent">Senthur</span> Chits
           </span>
           <span className="h-6 w-px bg-border/70 mx-3" aria-hidden="true"></span>
-          <nav className="flex items-center gap-6">
+          <nav className={`flex items-center ${isScrolled ? "gap-4" : "gap-6"}`}>
             <a href="#how-it-works" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
               How it Works
             </a>
@@ -46,7 +46,7 @@ const Header = () => {
           </nav>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className={`flex items-center ${isScrolled ? "gap-2" : "gap-3"}`}>
           <Button variant="outline" size="sm" className={`${isScrolled ? "text-[hsl(var(--ink))] border-border" : ""}`}>
             Sign In
           </Button>

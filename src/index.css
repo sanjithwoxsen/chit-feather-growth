@@ -179,17 +179,17 @@ All colors MUST be HSL.
   100% { background-position: 0% 50%; }
 }
 @keyframes wave-sway-1 {
-  0%   { transform: translateX(-6%) translateY(0) rotate(0.3deg) scale(1); }
-  50%  { transform: translateX(6%) translateY(-2%) rotate(-0.3deg) scale(1.03); }
-  100% { transform: translateX(-6%) translateY(0) rotate(0.3deg) scale(1); }
+  0%   { transform: translateX(6%) translateY(-6%) rotate(0.15deg) scale(1.01); }
+  50%  { transform: translateX(0%) translateY(0%) rotate(0deg) scale(1.03); }
+  100% { transform: translateX(-6%) translateY(6%) rotate(-0.15deg) scale(1.01); }
 }
 @keyframes wave-sway-2 {
-  0%   { transform: translateX(5%) translateY(0) rotate(-0.2deg) scale(1.01); }
-  50%  { transform: translateX(-5%) translateY(2%) rotate(0.2deg) scale(1.04); }
-  100% { transform: translateX(5%) translateY(0) rotate(-0.2deg) scale(1.01); }
+  0%   { transform: translateX(5%) translateY(-5%) rotate(0.1deg) scale(1.01); }
+  50%  { transform: translateX(0%) translateY(0%) rotate(0deg) scale(1.04); }
+  100% { transform: translateX(-5%) translateY(5%) rotate(-0.1deg) scale(1.01); }
 }
 @keyframes wave-sway-3 {
-  0%   { transform: translateX(-4%) translateY(0) rotate(0.2deg) scale(1.02); }
-  50%  { transform: translateX(4%) translateY(-1.5%) rotate(-0.2deg) scale(1.05); }
-  100% { transform: translateX(-4%) translateY(0) rotate(0.2deg) scale(1.02); }
+  0%   { transform: translateX(4%) translateY(-4%) rotate(0.05deg) scale(1.02); }
+  50%  { transform: translateX(0%) translateY(0%) rotate(0deg) scale(1.05); }
+  100% { transform: translateX(-4%) translateY(4%) rotate(-0.05deg) scale(1.02); }
 }

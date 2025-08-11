@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   return (
@@ -15,6 +16,9 @@ const Footer = () => {
                 className="h-8 w-8 filter brightness-0 invert"
               />
               <span className="text-xl font-bold">Senthur Chits</span>
+            </div>
+            <div className="pt-2">
+              <Logo className="h-10 w-10 logo-glow" aria-label="Senthur Chits Logo" />
             </div>
             <p className="text-background/80 max-w-xs">
               India's most trusted chit fund platform helping thousands achieve their financial goals.
