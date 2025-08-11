@@ -20,7 +20,7 @@ const Header = () => {
       {/* Desktop menu bar: attached until scroll, then floating curved pill */}
       <div
         className={`${isScrolled
-          ? "fixed top-4 left-0 right-0 mx-auto w-[min(92%,1000px)] rounded-full bg-background/50 backdrop-blur-lg border border-border/50 shadow-glass px-5 py-2.5"
+          ? "fixed top-4 left-0 right-0 mx-auto w-[min(92%,1000px)] rounded-full bg-background/40 backdrop-blur-lg border border-border/50 shadow-glass px-5 py-2.5"
           : "container mx-auto px-4 py-4"
         } transition-colors duration-500 ease-out hidden md:flex items-center justify-between`}
       >
@@ -30,21 +30,22 @@ const Header = () => {
             <span className="bg-gradient-peacock bg-clip-text text-transparent">Senthur</span> Chits
           </span>
           <span className="h-6 w-px bg-border/70 mx-3" aria-hidden="true"></span>
-          <nav className={`flex items-center ${isScrolled ? "gap-4" : "gap-6"}`}>
-            <a href="#how-it-works" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
-              How it Works
-            </a>
-            <a href="#plans" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
-              Plans
-            </a>
-            <a href="#calculator" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
-              Calculator
-            </a>
-            <a href="#about" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
-              About
-            </a>
-          </nav>
         </div>
+
+        <nav className={`flex-1 flex items-center justify-center ${isScrolled ? "gap-4" : "gap-6"}`}>
+          <a href="#plans" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
+            Plans
+          </a>
+          <a href="#how-it-works" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
+            How it Works
+          </a>
+          <a href="#calculator" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
+            Calculator
+          </a>
+          <a href="#about" className={`${isScrolled ? "text-[hsl(var(--ink))]" : "text-muted-foreground"} hover:text-primary transition-colors`}>
+            About
+          </a>
+        </nav>
 
         <div className={`flex items-center ${isScrolled ? "gap-2" : "gap-3"}`}>
           <Button variant="outline" size="sm" className={`${isScrolled ? "text-[hsl(var(--ink))] border-border" : ""}`}>

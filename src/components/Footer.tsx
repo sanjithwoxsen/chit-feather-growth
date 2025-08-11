@@ -10,15 +10,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/e6e76de3-b5f5-47f6-8dbf-176a71b9ee62.png" 
-                alt="Senthur Chits Logo" 
-                className="h-8 w-8 filter brightness-0 invert"
-              />
+              <Logo className="h-8 w-8 logo-glow" aria-label="Senthur Chits Logo" />
               <span className="text-xl font-bold">Senthur Chits</span>
-            </div>
-            <div className="pt-2">
-              <Logo className="h-10 w-10 logo-glow" aria-label="Senthur Chits Logo" />
             </div>
             <p className="text-background/80 max-w-xs">
               India's most trusted chit fund platform helping thousands achieve their financial goals.
