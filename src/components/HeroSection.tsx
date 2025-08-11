@@ -7,6 +7,13 @@ const HeroSection = () => {
     <section className="relative min-h-screen bg-gradient-aurora bg-[length:240%_240%] animate-aurora-waves flex items-center overflow-hidden">
       {/* Enhanced Background Animation */}
       <div className="absolute inset-0">
+        {/* Wave layers using existing gradient colors only */}
+        <div className="gradient-wave" aria-hidden="true">
+          <div className="wave top" />
+          <div className="wave mid" />
+          <div className="wave bot" />
+        </div>
+
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-peacock rounded-full filter blur-xl animate-float opacity-20"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-peacock-subtle rounded-full filter blur-xl animate-float-slow opacity-15"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-card-glow rounded-full filter blur-2xl opacity-10 animate-pulse"></div>
@@ -23,6 +30,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

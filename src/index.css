@@ -37,6 +37,7 @@ All colors MUST be HSL.
     --border: 220 15% 85%;
     --input: 220 15% 85%;
     --ring: 162 45% 60%;
+    --ink: 0 0% 0%;
 
     /* Peacock logo gradient - vivid but clean */
     --gradient-peacock: linear-gradient(135deg, hsl(218 84% 43%), hsl(192 78% 47%), hsl(102 78% 52%));
@@ -150,4 +151,45 @@ All colors MUST be HSL.
   .text-glow-warm {
     text-shadow: 0 1px 0 hsl(var(--background)), 0 0 16px hsl(var(--glow-warm) / 0.35);
   }
+
+  /* Gradient wave utilities (use existing gradient colors only) */
+  .gradient-wave { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .wave {
+    position: absolute;
+    left: -20%;
+    width: 140%;
+    height: 70%;
+    background-image: var(--gradient-aurora);
+    background-size: 220% 220%;
+    filter: blur(32px);
+    opacity: 0.28;
+    will-change: transform, background-position, clip-path;
+    animation: aurora-waves 20s ease-in-out infinite alternate;
+    mask-image: radial-gradient(120% 80% at 50% 50%, #000 45%, transparent 70%);
+  }
+  .wave.top { top: -10%; animation-name: aurora-waves, wave-sway-1; mask-image: radial-gradient(110% 60% at 50% 18%, #000 45%, transparent 70%); }
+  .wave.mid { top: 25%; animation-name: aurora-waves, wave-sway-2; mask-image: radial-gradient(120% 70% at 50% 50%, #000 45%, transparent 70%); opacity: 0.22; }
+  .wave.bot { bottom: -10%; animation-name: aurora-waves, wave-sway-3; mask-image: radial-gradient(110% 60% at 50% 82%, #000 45%, transparent 70%); }
+}
+
+/* Keyframes for smooth tide-like motion */
+@keyframes aurora-waves {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes wave-sway-1 {
+  0%   { transform: translateX(-6%) translateY(0) rotate(0.3deg) scale(1); }
+  50%  { transform: translateX(6%) translateY(-2%) rotate(-0.3deg) scale(1.03); }
+  100% { transform: translateX(-6%) translateY(0) rotate(0.3deg) scale(1); }
+}
+@keyframes wave-sway-2 {
+  0%   { transform: translateX(5%) translateY(0) rotate(-0.2deg) scale(1.01); }
+  50%  { transform: translateX(-5%) translateY(2%) rotate(0.2deg) scale(1.04); }
+  100% { transform: translateX(5%) translateY(0) rotate(-0.2deg) scale(1.01); }
+}
+@keyframes wave-sway-3 {
+  0%   { transform: translateX(-4%) translateY(0) rotate(0.2deg) scale(1.02); }
+  50%  { transform: translateX(4%) translateY(-1.5%) rotate(-0.2deg) scale(1.05); }
+  100% { transform: translateX(-4%) translateY(0) rotate(0.2deg) scale(1.02); }
 }
